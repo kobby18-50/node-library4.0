@@ -26,10 +26,10 @@ const getAllMyBooks = async (req,res) => {
 }
 
 const createBook = async (req,res) => {
-    const {title, description} = req.body
+    const {title, description, category} = req.body
     const {name, userId} = req.user
 
-    if (!title || !description){
+    if (!title || !description || !category){
         throw new BadRequestError('Some values were not provided')
     }
 

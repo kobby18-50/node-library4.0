@@ -21,6 +21,11 @@ const BookSchema = new mongoose.Schema({
         minlength : 5
     },
 
+    category : {
+        type : String,
+        enum : ['fiction', 'history', 'technology', 'folktales', 'science', 'africa-culture', 'poems', 'foklore']
+    },
+
     file : {
         type : String,
     },
